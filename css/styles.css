@@ -1,6 +1,6 @@
 @font-face {
   font-family: Notera;
-  src: url('./Notera.otf');
+  src: url('../Notera.otf');
 }
 
 /* RESET STYLES */
@@ -37,7 +37,7 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  background-image: url(/images/paper.jpg);
+  background-image: url(../images/paper.jpg);
   background-repeat: repeat;
   height: 60px;
   font-family: sans-serif;
