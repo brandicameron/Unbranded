@@ -126,13 +126,6 @@ main {
   padding-top: 6em;
 }
 
-.albums {
-  padding-top: 6em;
-  padding: 6em 1.5em 0 1.5em;
-  width: 100%;
-  max-width: 600px;
-}
-
 .script {
   font-family: Notera, sans-serif;
   font-size: calc(26px + 1vw);
@@ -155,12 +148,13 @@ main {
   position: fixed;
   top: 40px;
   left: -3px;
-  font-weight: 700;
+  font-family: sans-serif;
+  font-weight: bold;
   font-size: 14px;
   height: 40px;
   width: 85px;
-  border: 2px solid black;
-  background-color: #fff;
+  border: 1px dotted black;
+  background-color: rgb(255, 255, 255, .5);
   cursor: pointer;
 }
 
@@ -174,6 +168,13 @@ main {
   width: 100%;
   max-width: 958px;
   margin-left: -3em;
+}
+
+.albums {
+  padding: 6em 1.5em 0 1.5em;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: -1.5em;
 }
 
 .rotated-spread-text {
