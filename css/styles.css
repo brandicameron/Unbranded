@@ -25,7 +25,7 @@ body {
 }
 
 a {
-  color: #222222;
+  color: #333333;
 }
 
 .spacer {
@@ -41,10 +41,25 @@ nav {
   background-repeat: repeat;
   height: 60px;
   font-family: sans-serif;
-  color: #222222;
+  color: #333333;
   text-transform: uppercase;
   letter-spacing: .05em;
   font-size: calc(10px + .5vw);
+}
+
+nav > a:hover {
+  font-weight: 700;
+}
+
+.dropdown  {
+  display: block;
+  margin-top: 1.4em;
+}
+
+.dropdown-content {
+  padding-top: .7em;
+  font-family: sans-serif;
+  font-size: calc(7px + .5vw);
 }
 
 .secondary-nav {
@@ -52,6 +67,7 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  color: #333333;
   text-transform: uppercase;
   letter-spacing: .05em;
   font-size: calc(9px + .4vw);
@@ -67,10 +83,6 @@ nav {
   padding: 1.7vw;
 }
 
-nav > a:hover {
-  font-weight: 700;
-}
-
 header {
   display: flex;
   flex-wrap: wrap;
@@ -79,7 +91,7 @@ header {
   background-image: url(../images/paper.jpg);
   height: 120px;
   font-family: Notera, sans-serif;
-  color: #222222;
+  color: #333333;
   margin-top: -.4em;
   font-size: 4em;
 }
@@ -87,7 +99,7 @@ header {
 
 .sub-heading {
   font-family: sans-serif;
-  color: #222222;
+  color: #333333;
   font-size: 15px;
   letter-spacing: .03em;
   border: 1px dotted black;
@@ -129,7 +141,7 @@ main {
 .script {
   font-family: Notera, sans-serif;
   font-size: calc(26px + 1vw);
-  color: #222222;
+  color: #333333;
 }
 
 /* ---------------- ALBUMS & ALBUM PAGES ---------------- */
