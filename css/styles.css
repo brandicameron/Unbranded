@@ -1,0 +1,183 @@
+@font-face {
+  font-family: Notera;
+  src: url(/Notera.otf);
+}
+
+/* RESET STYLES */
+* {
+margin: 0;
+padding: 0;
+text-align: center;
+text-decoration: none;
+}
+
+/* CHANGES DOC TO BOX MODEL */
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: #222222;
+}
+
+.spacer {
+  height: 5em;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background-image: url(/images/paper.jpg);
+  height: 60px;
+  font-family: sans-serif;
+  color: #222222;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-size: calc(10px + .5vw);
+}
+
+.secondary-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-size: calc(9px + .4vw);
+  font-family: sans-serif;
+  padding-top: 20px;
+}
+
+.secondary-nav > a:hover {
+  font-weight: 700;
+}
+
+.navlink {
+  padding: 1.7vw;
+}
+
+nav > a:hover {
+  font-weight: 700;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background-image: url(/images/paper.jpg);
+  height: 120px;
+  font-family: Notera, sans-serif;
+  color: #222222;
+  margin-top: -.4em;
+  font-size: 4em;
+}
+
+
+.sub-heading {
+  font-family: sans-serif;
+  color: #222222;
+  font-size: 15px;
+  letter-spacing: .03em;
+  border: 1px dotted black;
+  width: 50vw;
+  margin: 4em auto -4em auto;
+  padding: 20px 0;
+}
+
+.shadow {
+  width: 90vw;
+  height: 18px;
+  opacity: .7;
+}
+
+.horizontal {
+  margin-bottom: -21%;
+}
+
+.vertical {
+  margin-bottom: -.7em;
+}
+
+.cards {
+  width: 100%;
+  max-width: 600px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.horizontal, .vertical {
+  padding-top: 6em;
+}
+
+.albums {
+  padding-top: 6em;
+  padding: 6em 1.5em 0 1.5em;
+  width: 100%;
+  max-width: 600px;
+}
+
+.script {
+  font-family: Notera, sans-serif;
+  font-size: calc(26px + 1vw);
+  color: #222222;
+}
+
+/* ---------------- ALBUMS & ALBUM PAGES ---------------- */
+
+.album-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background-image: url(/images/paper.jpg);
+  height: 175px;
+  font-size: 3.4em;
+}
+
+.back-button {
+  position: fixed;
+  top: 40px;
+  left: -3px;
+  font-weight: 700;
+  font-size: 14px;
+  height: 40px;
+  width: 85px;
+  border: 2px solid black;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.album-page-and-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-pages {
+  width: 100%;
+  max-width: 958px;
+  margin-left: -3em;
+}
+
+.rotated-spread-text {
+  font-family: sans-serif;
+  color: grey;
+  opacity: .6;
+  transform: rotate(-90deg);
+}
