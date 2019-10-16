@@ -1,6 +1,6 @@
 @font-face {
   font-family: Notera;
-  src: url(./Notera.otf);
+  src: url('./Notera.otf');
 }
 
 /* RESET STYLES */
