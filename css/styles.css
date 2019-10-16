@@ -76,7 +76,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  background-image: url(/images/paper.jpg);
+  background-image: url(../images/paper.jpg);
   height: 120px;
   font-family: Notera, sans-serif;
   color: #222222;
@@ -146,7 +146,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  background-image: url(/images/paper.jpg);
+  background-image: url(../images/paper.jpg);
   height: 175px;
   font-size: 3.4em;
 }
