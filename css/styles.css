@@ -40,8 +40,27 @@ a {
   color: #333333;
 }
 
+p {
+  font-family: 'Lato', sans-serif;
+  color: #333333;
+  letter-spacing: .05em;
+  font-size: calc(11px + .4vw);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.larger-text {
+  font-size: 24px;
+}
+
 .spacer {
   height: 5em;
+}
+
+.spacer-small {
+  height: 1em;
 }
 
 nav {
@@ -205,6 +224,15 @@ main {
   font-family: Notera, 'Lato', sans-serif;
   font-size: calc(26px + 1vw);
   color: #333333;
+  letter-spacing: -.01em;
+}
+
+.previous-years {
+  height: 150px;
+  border-top: 1.5px dotted black;
+  border-bottom: 1.5px dotted black;
+  padding-top: 40px;
+  margin: 4em 0;
 }
 
 /* ---------------- ALBUMS & ALBUM PAGES ---------------- */
@@ -249,7 +277,7 @@ main {
   padding: 6em 1.5em 0 1.5em;
   width: 100%;
   max-width: 600px;
-  margin-bottom: -1.5em;
+  margin-bottom: -1em;
 }
 
 .rotated-spread-text {
