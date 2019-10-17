@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/styles.css">
-<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 <!-- This script makes the univeral nav work  -->
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
@@ -61,9 +61,59 @@ $(function(){
     <p class="script">Mr &amp; Mrs</p>
   </div>
   
+   <div>
+    <a href="modern-reception.html"><img class="albums" src="images/albums/reception/Modern-Reception-Album-Photoshop-Template-Main.jpg" alt="Modern Reception Book"></a>
+    <p class="script">Modern</p>
+  </div>
   
+  <div>
+    <a href="lovely-reception.html"><img class="albums" src="images/albums/reception/Lovely-Reception-Album-Photoshop-Template-Main.jpg" alt="Lovely Reception Book"></a>
+    <p class="script">Lovely</p>
+  </div>
+  
+   <div>
+    <a href="two-if-by-sea-reception.html"><img class="albums" src="images/albums/reception/TwoifbySea-Reception-Album-Photoshop-Template-Main.jpg" alt="Two if By Sea Reception Book"></a>
+    <p class="script">Two if By Sea</p>
+  </div>
+  
+  <div>
+    <a href="chic-reception.html"><img class="albums" src="images/albums/reception/Chic-Reception-Album-Photoshop-Template-Main.jpg" alt="Chic Reception Book"></a>
+    <p class="script">Chic</p>
+  </div>
+  
+   <div>
+    <a href="sweethearts-reception.html"><img class="albums" src="images/albums/reception/Sweethearts-Reception-Album-Photoshop-Template-Main.jpg" alt="Sweethearts Reception Book"></a>
+    <p class="script">Sweethearts</p>
+  </div>
+  
+  <div>
+    <a href="original-reception.html"><img class="albums" src="images/albums/reception/Original-Reception-Album-Photoshop-Template-Main.jpg" alt="Original Reception Book"></a>
+    <p class="script">Original Reception</p>
+  </div>
   
 </main>
+  
+<footer>
+   <a href="#top" id="scroll" class="back-to-top"><span class="up-arrow">&#8679;</span></a>
+</footer>
+ 
+ <script>
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
+  </script>
+
+
   
   
 </body>
