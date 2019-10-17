@@ -129,6 +129,19 @@ header {
   font-size: 4em;
 }
 
+.card-only-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background-image: url(../images/paper.jpg);
+  height: 170px;
+  font-family: Notera, 'Lato', sans-serif;
+  color: #333333;
+  margin-top: -.1em;
+  font-size: 4em;
+}
+
 .sub-heading {
   font-family: 'Lato', sans-serif;
   color: #333333;
@@ -233,6 +246,10 @@ main {
   border-bottom: 1.5px dotted black;
   padding-top: 40px;
   margin: 4em 0;
+}
+
+.add-grid-gap {
+  grid-column-gap: 50px;
 }
 
 /* ---------------- ALBUMS & ALBUM PAGES ---------------- */
