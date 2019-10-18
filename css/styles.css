@@ -47,13 +47,7 @@ p {
   font-size: calc(11px + .4vw);
 }
 
-.bold {
-  font-weight: 700;
-}
 
-.larger-text {
-  font-size: 24px;
-}
 
 .spacer {
   height: 5em;
@@ -61,6 +55,10 @@ p {
 
 .spacer-small {
   height: 1em;
+}
+
+.padding-top-4em {
+  padding-top: 4em;
 }
 
 nav {
@@ -323,6 +321,26 @@ main {
   transform: rotate(-90deg);
 }
 
+
+/* ---------------- COLLAGES ---------------- */
+
+.collages-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.h-24x36-collage {
+  margin-bottom: -3em;
+}
+
+.h-10x20-collage {
+  margin-bottom: -4em;
+}
+
+.sq-collage {
+  margin-bottom: -1.5em;
+}
+
 /* ---------------- FOOTER ---------------- */
 
 footer {
@@ -330,4 +348,16 @@ footer {
   background-image: url(../images/paper.jpg);
   background-repeat: repeat;
   margin-top: 100px;
+}
+
+
+
+/* ---------------- FOOTER ---------------- */
+
+.bold {
+  font-weight: 700;
+}
+
+.larger-text {
+  font-size: 24px;
 }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Bridal Albums | Our Photo Products</title>
+<meta charset="utf-8">
+<meta name="handheldfriendly" content="true">
+<meta name="mobileoptimized" content="240">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+<!-- This script makes the univeral nav work  -->
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+  
+<!-- NAVIGATION: Make changes in the nav.html file. -->
+<div id="nav-placeholder"></div>
+<script>
+$(function(){
+  $("#nav-placeholder").load("nav.html");
+});
+</script>
+  
+<img class="shadow" src="images/shadow.png" alt="">
+  
+<header>Bridal</header>
+<!--<img class="shadow" src="images/shadow.png" alt="">-->
+  
+<!-- SECONDARY NAVIGATION: Make changes in the nav-albums.html file. -->
+<div id="nav-cards-placeholder"></div>
+<script>
+$(function(){
+  $("#nav-cards-placeholder").load("nav-albums.html");
+});
+</script>
+  
+<main>
+  
+  <div>
+    <a href="framed-guest-book.html"><img class="albums" src="images/albums/bridal/BW-Bridal-Album-Photoshop-Template-Main.jpg" alt="Framed Reception Book"></a>
+    <p class="script">Black &amp; White</p>
+  </div>
+  
+  <div>
+    <a href="forever-reception.html"><img class="albums" src="images/albums/bridal/Savannah-Senior-Album-Photoshop-Template-Main.jpg" alt="Forever Reception Book"></a>
+    <p class="script">Savannah
+</main>
+  
+<footer>
+   <a href="#top" id="scroll" class="back-to-top"><span class="up-arrow">&#8679;</span></a>
+</footer>
+ 
+ <script>
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
+  </script>
+
+
+  
+  
+</body>
+</html>
