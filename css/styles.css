@@ -248,6 +248,25 @@ main {
   margin: 4em 0;
 }
 
+.thank-you {
+  display: block;
+  width: 100%;
+}
+
+.ty {
+  margin-bottom: -8%;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.dotted-divider {
+  position: relative;
+  border-bottom: 1px dotted black;
+  width: 80%;
+  margin: 8% auto -3% auto;
+  z-index: 9;
+}
+
 .add-grid-gap {
   grid-column-gap: 50px;
 }
