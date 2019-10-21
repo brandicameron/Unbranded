@@ -227,6 +227,14 @@ main {
   padding: 0 3%;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 85%;
+  margin: -1em auto 0 auto;
+  padding: 0 3%;
+}
+
 .horizontal, .vertical {
   padding-top: 6em;
 }
@@ -327,6 +335,9 @@ main {
 .collages-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  width: 85%;
+  margin: -1em auto 0 auto;
+  padding: 0 3%;
 }
 
 .h-24x36-collage {
