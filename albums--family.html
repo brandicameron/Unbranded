@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Family Albums | Our Photo Products</title>
+<meta charset="utf-8">
+<meta name="handheldfriendly" content="true">
+<meta name="mobileoptimized" content="240">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+<!-- This script makes the univeral nav work  -->
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+  
+<!-- NAVIGATION: Make changes in the nav.html file. -->
+<div id="nav-placeholder"></div>
+<script>
+$(function(){
+  $("#nav-placeholder").load("nav.html");
+});
+</script>
+  
+<img class="shadow" src="images/shadow.png" alt="">
+  
+<header>Family</header>
+<!--<img class="shadow" src="images/shadow.png" alt="">-->
+  
+<!-- SECONDARY NAVIGATION: Make changes in the nav-albums.html file. -->
+<div id="nav-cards-placeholder"></div>
+<script>
+$(function(){
+  $("#nav-cards-placeholder").load("nav-albums.html");
+});
+</script>
+  
+<main>
+  <div>
+    <a href="classic-family.html"><img class="albums" src="images/albums/family/Classic-Family-Album-Photoshop-Template-Main.jpg" alt="Classic Family Book/Album"></a>
+    <p class="script">Classic Family</p>
+  </div>
+  
+  <div>
+    <a href="family.html"><img class="albums" src="images/albums/family/Quick-Family-Album-Photoshop-Template-Main.jpg" alt="Quick Family Book/Album"></a>
+    <p class="script">Quick Family</p>
+  </div>
+  
+  <div>
+    <a href="ig-gallery.html"><img class="albums" src="images/albums/senior/IGGallery-Senior-Album-Photoshop-Template-Main.jpg" alt="IG Gallery Family Book"></a>
+    <p class="script">IG Gallery</p>
+  </div>
+</main>
+  
+<footer>
+   <a href="#top" id="scroll" class="back-to-top"><span class="up-arrow">&#8679;</span></a>
+</footer>
+ 
+ <script>
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
+  </script>
+
+
+  
+  
+</body>
+</html>
