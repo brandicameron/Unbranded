@@ -2,56 +2,65 @@
 <html lang="en">
 
 <head>
-<title>Our Photo Products</title>
-<meta charset="utf-8">
-<meta name="handheldfriendly" content="true">
-<meta name="mobileoptimized" content="240">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/styles.css">
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-<!-- This script makes the univeral nav work  -->
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<title>Photo Products</title>
+	<meta charset="utf-8">
+	<meta name="handheldfriendly" content="true">
+	<meta name="mobileoptimized" content="240">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  
-  <div class="home-page-container">
-    
-  <div class="welcome">Welcome</div>
-  <p class="see">What would you like to see?</p>
-  <div class="homepage-group">
-    <div>
-      <a href="albums.html"><img class="thumb" src="images/home/albums-thumb.jpg" alt="Click here to view Album Designs"></a>
-      <p class="caption">Books/Albums</p>
-    </div>
-    
-    <div>
-      <a href="holidaycards.html"><img class="thumb" src="images/home/cards-thumb.jpg" alt="Click here to view Card Designs"></a>
-      <p class="caption">Cards</p>
-    </div>
-    
-    <div>
-      <a href="collages.html"><img class="thumb" src="images/home/collages-thumb.jpg" alt="Click here to view Collage Designs"></a>
-      <p class="caption">Collages</p>
-    </div>
-    
-    <div>
-      <a href="index.html"><img class="thumb" src="images/home/accordions-thumb.jpg" alt="Click here to view Album Designs"></a>
-      <p class="caption">Accordion Mini&rsquo;s</p>
-    </div>
-    
-    <div>
-      <a href="index.html"><img class="thumb" src="images/home/4x8-accordions-thumb.jpg" alt="Click here to view Card Designs"></a>
-      <p class="caption">4x8 Accordions</p>
-    </div>
-    
-    <div>
-      <a href="image-boxes.html"><img class="thumb" src="images/home/image-boxes-thumb.jpg" alt="Click here to view Collage Designs"></a>
-      <p class="caption">Image Boxes</p>
-    </div>
-  </div>
-  </div>
-  
+
+	<div class="index-color">
+		<div class="index-page">
+			<!--  GLOBAL NAVIGATION   -->
+			<!--  Make changes in the main-navigation.html file   -->
+
+			<div id="main-navigation"></div>
+
+
+			<!--  PAGE CONTENT   -->
+
+			<section>
+				<div class="headline">
+					<div class="tag">Hold on to the Memory</div>
+					<h1>Get it Printed</h1>
+				</div>
+				<img class="album-img" src="./images/home/photo-album-template.png" alt="Holding a Photo Album">
+			</section>
+
+			<div class="border"></div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/CSSRulePlugin.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="./js/main.js"></script>
+
+	<script>
+		
+		gsap.registerPlugin(CSSRulePlugin);
+		
+		let tl = gsap.timeline();
+
+		tl.to('.index-page', {
+			duration: 1,
+			opacity: 1,
+			ease: 'ease-in',
+			delay: .5,
+		})
+		.to('.index-page', {
+			scale: 1,
+			duration: .5,
+			ease: 'sine',
+		}, "-=.8")
+		
+		
+		
+	</script>
 </body>
+
 </html>
