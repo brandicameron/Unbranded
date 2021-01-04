@@ -459,6 +459,18 @@ footer {
 	h1 {
 		margin-top: 20px;
 	}
+	
+	.border {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	width: calc(100vw - 80px);
+	height: calc(100vh - 120px);
+	border: 10px solid black;
+	z-index: 1;
+}
 }
 
 @media screen and (max-width: 799px) {
@@ -474,8 +486,8 @@ footer {
 	.banner-img {
 		margin: 0 auto -5vw auto;
 		width: 400px;
-		;
 	}
+	
 }
 
 @media screen and (max-width: 415px) {
