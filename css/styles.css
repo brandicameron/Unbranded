@@ -450,8 +450,8 @@ footer {
 
 @media screen and (max-width: 1050px) {
 	
-	html {
-		height: -webkit-fill-available;
+	body {
+		min-height: -webkit-fill-available;
 	}
 	
 	.headline {
