@@ -23,40 +23,6 @@ body {
 	color: #333333;
 }
 
-/* ---------------- UTILITY ---------------- */
-
-.spacer {
-	height: 5em;
-}
-
-.spacer-small {
-	height: 1em;
-}
-
-.padding-top-4em {
-	padding-top: 4em;
-}
-
-.mobile-break {
-	display: none;
-}
-
-.fixed-nav {
-	position: fixed;
-	top: 0;
-	width: 100vw;
-	z-index: 1000;
-}
-
-.bold {
-	font-weight: 700;
-}
-
-.larger-text {
-	font-size: 24px;
-}
-
-
 /* ---------------- GLOBAL ---------------- */
 
 a {
@@ -102,10 +68,46 @@ header {
 	width: 100vw;
 }
 
+.sub-heading {
+	font-size: .95rem;
+	letter-spacing: .05em;
+	border: 1px dashed #b9b9b9;
+	border-radius: 3px;
+	width: 50vw;
+	margin: 1em auto;
+	padding: 15px 0;
+}
+
+.sub-menu > a {
+	margin: .5rem;
+}
+
+.sub-menu > a:hover {
+	color: rgb(86, 73, 252);
+}
+
+.bar {
+	display: inline;
+	color: #b9b9b9
+}
+
+main,
+.main {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: 80%;
+	margin: 0 auto;
+	grid-gap: 8rem;
+}
+
 .product-name {
 	font-size: calc(10px + .5vw);
 	letter-spacing: .2px;
 	padding-top: 10px;
+}
+
+.margin-bottom-3 {
+	margin-bottom: -3em;
 }
 
 
@@ -133,6 +135,11 @@ nav {
 	cursor: pointer;
 }
 
+.hover-item:hover .dropdown {
+	visibility: visible;
+	opacity: 1;
+}
+
 .dropdown {
 	visibility: hidden;
 	opacity: 0;
@@ -156,9 +163,8 @@ nav {
 	border-bottom: none;
 }
 
-.hover-item:hover .dropdown {
-	visibility: visible;
-	opacity: 1;
+.sub-menu-item:hover {
+	color: rgb(86, 73, 252);
 }
 
 /* ---------------- INDEX PAGE ---------------- */
@@ -219,32 +225,6 @@ h1 {
 	height: calc(100vh - 80px);
 	border: 10px solid black;
 	z-index: 1;
-}
-
-/* ----------------SUB HEADINGS - WILL CHANGE ---------------- */
-
-.card-only-collection {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: center;
-	background-image: url(../images/paper.jpg);
-	height: 170px;
-	font-family: Notera, 'Lato', sans-serif;
-	color: #333333;
-	margin-top: -.1em;
-	font-size: 4em;
-}
-
-.sub-heading {
-	font-family: 'Lato', sans-serif;
-	color: #333333;
-	font-size: 14px;
-	letter-spacing: .05em;
-	border: 1px dotted black;
-	width: 50vw;
-	margin: 4em auto -4em auto;
-	padding: 15px 0;
 }
 
 /* ---------------- CARDS ---------------- */
@@ -316,16 +296,6 @@ h1 {
 	max-width: 600px;
 }
 
-/*
-main {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	width: 85%;
-	margin: -1em auto 0 auto;
-	padding: 0 3%;
-}
-*/
-
 .grid-container {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -343,53 +313,9 @@ main {
 	margin: 4em 0;
 }
 
-.thank-you {
-	display: block;
-	width: 100%;
-}
-
-.ty {
-	margin-bottom: -8%;
-	width: 100%;
-	max-width: 1024px;
-}
-
-.dotted-divider {
-	position: relative;
-	border-bottom: 1px dotted black;
-	width: 80%;
-	margin: 8% auto -3% auto;
-	z-index: 9;
-}
-
-.add-grid-gap {
-	grid-column-gap: 50px;
-}
 
 /* ---------------- ALBUMS & ALBUM PAGES ---------------- */
 
-.album-header {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: center;
-	background-image: url(../images/paper.jpg);
-	height: 175px;
-	font-size: 3.4em;
-}
-
-.back-button {
-	position: fixed;
-	top: 40px;
-	left: -3px;
-	font-family: 'Lato', sans-serif;
-	font-size: 14px;
-	height: 40px;
-	width: 85px;
-	border: 1px dotted black;
-	background-color: rgb(255, 255, 255, .5);
-	cursor: pointer;
-}
 
 .album-page-and-text {
 	display: flex;
@@ -400,21 +326,20 @@ main {
 .album-pages {
 	width: 100%;
 	max-width: 958px;
-	margin-left: -3em;
+	margin-left: -2rem;
 }
 
 .albums {
-	padding: 6em 1.5em 0 1.5em;
 	width: 100%;
 	max-width: 600px;
-	margin-bottom: -1em;
+	margin-bottom: -1rem;
 }
 
 .rotated-spread-text {
 	font-family: 'Lato', sans-serif;
-	color: grey;
-	opacity: .6;
+	color: #afafaf;
 	transform: rotate(-90deg);
+	margin-left: -3rem;
 }
 
 
@@ -422,28 +347,62 @@ main {
 
 .collages-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	width: 85%;
-	margin: -1em auto 0 auto;
-	padding: 0 3%;
+	grid-template-columns: repeat(3, 1fr);
+	width: 80%;
+	margin: 0 auto;
+	grid-gap: 4rem;
 }
 
 .h-24x36-collage {
-	margin-bottom: -3em;
+	margin-bottom: -1.5em;
 }
 
 .h-10x20-collage {
-	margin-bottom: -4em;
+	margin-bottom: -3em;
 }
 
 .sq-collage {
-	margin-bottom: -1.5em;
+	margin-bottom: -.5em;
 }
 
 /* ---------------- FOOTER ---------------- */
 
 footer {
 	height: 100px;
+}
+
+
+/* ---------------- UTILITY ---------------- */
+
+.spacer {
+	height: 5em;
+}
+
+.spacer-small {
+	height: 1em;
+}
+
+.padding-top-4em {
+	padding-top: 4em;
+}
+
+.margin-top-xl {
+	margin-top: 7rem;
+}
+
+.mobile-break {
+	display: none;
+}
+
+.fixed-nav {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	z-index: 1000;
+}
+
+.bold {
+	font-weight: 700;
 }
 
 /* ---------------- MEDIA ---------------- */

@@ -4,7 +4,7 @@
 
 // GLOBAL NAV
 $(function () {
-	$("#main-navigation").load("main-navigation.html");
+	$(".main-navigation").load("main-navigation.html");
 });
 
 
@@ -32,7 +32,7 @@ function viewLarge(e) {
 	
 	let lgImage;
 	
-	if (e.target.classList.contains('cards')) {
+	if (e.target.classList.contains('view')) {
 		const imgClicked = e.target.src;
 		const frontImage = imgClicked.replace('-3','-2');
 		const backImage = imgClicked.replace('-2','-3');
@@ -80,6 +80,29 @@ function viewLarge(e) {
 	}
 }
 
+
+function closeLargeView(e) {
+	if (e.target.classList.contains('close')) {
+		e.target.parentNode.remove();
+	} else if (e.target.classList.contains('large-view')) {
+		e.target.remove();
+	}
+}
+
+
+// EVENT LISTENERS
+body.addEventListener('click', viewLarge);
+body.addEventListener('click', closeLargeView);
+
+window.addEventListener('keydown', function (e) {
+	const largeView = document.querySelector('.large-view');
+	if (e.key === 'Escape') {
+		largeView.remove();
+	}
+})
+
+
+
 //function viewLarge(e) {
 //	if (e.target.classList.contains('cards')) {
 //		
@@ -109,26 +132,3 @@ function viewLarge(e) {
 //		imgContainer.appendChild(lgImage);
 //	}
 //}
-
-
-
-
-function closeLargeView(e) {
-	if (e.target.classList.contains('close')) {
-		e.target.parentNode.remove();
-	} else if (e.target.classList.contains('large-view')) {
-		e.target.remove();
-	}
-}
-
-
-// EVENT LISTENERS
-body.addEventListener('click', viewLarge);
-body.addEventListener('click', closeLargeView);
-
-window.addEventListener('keydown', function (e) {
-	const largeView = document.querySelector('.large-view');
-	if (e.key === 'Escape') {
-		largeView.remove();
-	}
-})
