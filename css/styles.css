@@ -450,6 +450,10 @@ footer {
 
 @media screen and (max-width: 1050px) {
 	
+	html {
+		height: -webkit-fill-available;
+	}
+	
 	.headline {
 		position: relative;
 		top: 2vh;
