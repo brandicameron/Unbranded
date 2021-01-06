@@ -1,54 +1,51 @@
 <nav>
-	<a href="index.html">Home</a>
-	<div class="hover-item">
-		<div>Albums</div>
-		<div class="dropdown">
-			<a class="sub-menu-item" href="albums.html">Reception</a>
-			<a class="sub-menu-item" href="albums--wedding.html">Wedding</a>
-			<a class="sub-menu-item" href="bridal.html">Bridal</a>
-			<a class="sub-menu-item" href="albums--senior.html">Senior</a>
-			<a class="sub-menu-item" href="albums--kids.html">Baby &amp; Kids</a>
-			<a class="sub-menu-item" href="albums--family.html">Family</a>
-			<a class="sub-menu-item" href="albums--pets.html">Pets</a>
-			<a class="sub-menu-item" href="">Alternate Cover Designs</a>
-		</div>
-	</div>
-	<div class="hover-item">
-		<div>Cards</div>
-		<div class="dropdown">
-			<a class="sub-menu-item" href="birthannouncements.html">Birth Announcements</a>
-			<a class="sub-menu-item" href="holidaycards.html">Christmas Cards</a>
-			<a class="sub-menu-item" href="cards.html">Save-the-Date</a>
-			<a class="sub-menu-item" href="graduationcards.html">Senior Graduation</a>
-			<a class="sub-menu-item" href="wedding-thank-you-cards.html">Wedding Thank You</a>
-		</div>
-	</div>
-	<div class="hover-item">
-		<div>Collages</div>
-		<div class="dropdown">
-			<a class="sub-menu-item" href="collages.html">All Sizes</a>
-			<a class="sub-menu-item" href="collages.html">24x36</a>
-			<a class="sub-menu-item" href="collages.html#20x24">20x24</a>
-			<a class="sub-menu-item" href="collages.html#20x20">20x20</a>
-			<a class="sub-menu-item" href="collages.html#11x14">11x14</a>
-			<a class="sub-menu-item" href="collages.html#10x20">10x20</a>
-		</div>
-	</div>
-	<div class="hover-item">
-		<div>Accordions</div>
-		<div class="dropdown">
-			<a class="sub-menu-item" href="mini-accordions.html">Accordion Minis</a>
-			<a class="sub-menu-item" href="4x8-accordions.html">4x8 Accordions</a>
-		</div>
-	</div>
-	<div class="hover-item">
-		<div>Image Boxes</div>
-		<div class="dropdown">
-			<a class="sub-menu-item" href="image-boxes.html">All Boxes</a>
-			<a class="sub-menu-item" href="">Wedding</a>
-			<a class="sub-menu-item" href="">Senior</a>
-			<a class="sub-menu-item" href="">Baby &amp; Kids</a>
-			<a class="sub-menu-item" href="">Pets</a>
-		</div>
-	</div>
+	<input type="checkbox" id="menu-checkbox">
+	<!--<label for="checkbox1">HERE</label>-->
+	<span class="line1"></span>
+	<span class="line2"></span>
+	<span class="line3"></span>
+	<ul class="main-nav">
+		<li><a href="index.html">Home</a></li>
+		<li>
+			<!--<div class="dropdown">Albums</div>-->
+			<input type="checkbox" id="sub-check-1" class="sub-checks">
+			<label for="sub-check-1" class="dropdown">Albums</label>
+			<nav class="subnav">
+				<ul>
+					<li><a href="albums.html">Reception</a></li>
+					<li><a href="albums--wedding.html">Wedding</a></li>
+					<li><a href="bridal.html">Bridal</a></li>
+					<li><a href="albums--senior.html">Senior</a></li>
+					<li><a href="albums--kids.html">Baby &amp; Kids</a></li>
+					<li><a href="albums--family.html">Family</a></li>
+					<li><a href="albums--pets.html">Pets</a></li>
+					<li><a href="albums.html">Cover Designs</a></li>
+				</ul>
+			</nav>
+		</li>
+		<li>
+			<a href="" class="dropdown">Cards</a>
+			<nav class="subnav">
+				<ul>
+					<li><a href="birthannouncements.html">Birth Announcements</a></li>
+					<li><a href="holidaycards.html">Christmas Cards</a></li>
+					<li><a href="cards.html">Save the Dates</a></li>
+					<li><a href="graduationcards.html">Senior Graduation</a></li>
+					<li><a href="wedding-thank-you-cards.html">Wedding Thank You</a></li>
+				</ul>
+			</nav>
+		</li>
+		<li><a href="collages.html">Collages</a></li>
+		<li>
+			<a href="" class="dropdown">Accordions</a>
+			<nav class="subnav">
+				<ul>
+					<li><a href="mini-accordions.html">Accordion Minis</a></li>
+					<li><a href="4x8-accordions.html">4x8 Accordions</a></li>
+				</ul>
+			</nav>
+		</li>
+		<li><a href="image-boxes.html">Image Boxes</a></li>
+	</ul>
 </nav>
+<!--<img loading="lazy" class="shadow" src="images/shadow.png" alt="">-->
