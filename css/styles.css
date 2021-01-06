@@ -147,9 +147,13 @@ main,
 }
 */
 
+/*
 .sub-checks {
+	position: absolute;
+	width: 100px;
 	opacity: 0;
 }
+*/
 
 /*
 .sub-checks:checked ~ .subnav {
@@ -511,12 +515,23 @@ footer {
 /* ---------------- MEDIA ---------------- */
 
 
-@media (hover: none) {
-  a:hover { color: inherit; }
-}
-
-
 @media screen and (max-width: 1050px) {
+
+	.main-nav > li:hover,
+	.main-nav > li:focus-within {
+		pointer-events: none;
+	}
+
+	/*
+	.sub-checks {
+		pointer-events: auto;
+	}
+
+	.sub-checks:checked ~ .subnav {
+		transform: scaleY(1);
+	}
+	*/
+
 
 	.headline {
 		position: relative;
@@ -559,14 +574,6 @@ footer {
 
 	#menu-checkbox:checked ~ .main-nav {
 		opacity: 1;
-	}
-
-	.sub-checks:checked ~ .subnav {
-		transform: scaleY(1);
-	}
-	
-	.sub-checks:checked ~ .subnav {
-		/*  Delete me if not used  */
 	}
 
 	.main-nav li {
