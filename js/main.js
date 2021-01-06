@@ -51,7 +51,6 @@ function viewLarge(e) {
 
 		const closeBtn = document.createElement('div');
 		closeBtn.classList.add('close');
-		closeBtn.textContent = "X";
 		lgViewContainer.appendChild(closeBtn);
 
 		const imgContainer = document.createElement('div');
@@ -101,7 +100,6 @@ function viewLargeSingle(e) {
 
 		const closeBtn = document.createElement('div');
 		closeBtn.classList.add('close');
-		closeBtn.textContent = "X";
 		lgViewContainer.appendChild(closeBtn);
 
 		const imgContainer = document.createElement('div');
