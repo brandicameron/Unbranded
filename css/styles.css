@@ -160,17 +160,17 @@ li {
 }
 
 /* focus-within makes dropdown keyboard accessible */
+/*
 .main-nav > li:hover .subnav,
 .main-nav > li:focus-within .subnav {
 	transform: scaleY(1);
 }
+*/
 
-/*
 .dropdown-parent:hover .subnav,
 .dropdown-parent:focus-within .subnav {
 	transform: scaleY(1);
 }
-*/
 
 .subnav > ul > li {
 	padding: 17px 40px 17px 0;
@@ -493,17 +493,17 @@ footer {
 
 @media (hover: none) {
 
+	/*
 	.main-nav > li:hover,
 	.main-nav > li:focus-within {
 		pointer-events: none;
 	}
+	*/
 
-	/*
 	.dropdown-parent:hover,
 	.dropdown-parent:focus-within {
 		pointer-events: none;
 	}
-	*/
 	
 	.subnav {
 		pointer-events: auto;
