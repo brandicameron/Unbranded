@@ -5,10 +5,17 @@
 // GLOBAL NAV
 $(function () {
 	$(".main-navigation").load("main-navigation.html");
+	$(".index-main-navigation").load("index-main-navigation.html");
+	$(".footer-content").load("footer.html");
 });
 
 
-// SCROLL TO TOP BUTTON
+// FOOTER/SCROLL TO TOP BUTTON
+//$(function () {
+//	$(".footer-content").load("footer.html");
+//});
+
+
 $(document).ready(function () {
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 100) {

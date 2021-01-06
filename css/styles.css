@@ -5,6 +5,7 @@
 	text-decoration: none;
 	list-style: none;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 @font-face {
@@ -54,7 +55,7 @@ a {
 h1 {
 	font-family: 'Playfair Display', serif;
 	font-size: 3em;
-	height: 150px;
+	height: 75px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -71,7 +72,7 @@ p {
 	border: 1px dashed #b9b9b9;
 	border-radius: 3px;
 	width: 50vw;
-	margin: 1em auto;
+	margin: 3em auto;
 	padding: 15px 0;
 }
 
@@ -160,13 +161,6 @@ li {
 }
 
 /* focus-within makes dropdown keyboard accessible */
-/*
-.main-nav > li:hover .subnav,
-.main-nav > li:focus-within .subnav {
-	transform: scaleY(1);
-}
-*/
-
 .dropdown-parent:hover .subnav,
 .dropdown-parent:focus-within .subnav {
 	transform: scaleY(1);
@@ -493,13 +487,6 @@ footer {
 
 @media (hover: none) {
 
-	/*
-	.main-nav > li:hover,
-	.main-nav > li:focus-within {
-		pointer-events: none;
-	}
-	*/
-
 	.dropdown-parent:hover,
 	.dropdown-parent:focus-within {
 		pointer-events: none;
@@ -508,7 +495,6 @@ footer {
 	.subnav {
 		pointer-events: auto;
 	}
-
 }
 
 
@@ -524,8 +510,6 @@ footer {
 		justify-content: center;
 		align-items: center;
 	}
-
-	.banner {}
 
 	.album-img {
 		position: relative;
