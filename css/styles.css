@@ -85,8 +85,12 @@ p {
 	border-right: none;
 }
 
-.sub-heading > a:hover {
+a:hover {
 	color: rgb(86, 73, 252);
+}
+
+.dropdown:hover {
+	color: inherit;
 }
 
 main,
@@ -124,12 +128,6 @@ main,
 	z-index: 10;
 }
 
-
-
-
-
-
-
 #menu-checkbox {
 	position: absolute;
 	left: 5px;
@@ -140,31 +138,6 @@ main,
 	z-index: 200;
 	opacity: 0;
 }
-
-/*
-#menu-checkbox:checked ~ .main-nav {
-	opacity: 1;
-}
-*/
-
-/*
-.sub-checks {
-	position: absolute;
-	width: 100px;
-	opacity: 0;
-}
-*/
-
-/*
-.sub-checks:checked ~ .subnav {
-	transform: scaleY(1);
-}
-*/
-
-
-
-
-
 
 
 li {
@@ -192,6 +165,12 @@ li {
 	transform: scaleY(1);
 }
 
+/*
+.dropdown-parent:hover .subnav,
+.dropdown-parent:focus-within .subnav {
+	transform: scaleY(1);
+}
+*/
 
 .subnav > ul > li {
 	padding: 17px 40px 17px 0;
@@ -241,7 +220,6 @@ li {
 	opacity: 0;
 }
 
-
 .headline {
 	position: relative;
 	top: 3vh;
@@ -255,17 +233,15 @@ li {
 	font-size: .8rem;
 	text-align: center;
 	top: 5vh;
+	height: 30px;
 }
 
 .tagline {
 	font-family: 'Playfair Display', serif;
 	font-weight: 400;
-	font-size: calc(16px + 6vw);
-	line-height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	font-size: calc(16px + 9vh);
 	width: 100vw;
+	height: 60px;
 }
 
 .album-img {
@@ -516,21 +492,52 @@ footer {
 
 
 @media (hover: none) {
+
 	.main-nav > li:hover,
 	.main-nav > li:focus-within {
 		pointer-events: none;
+	}
+
+	/*
+	.dropdown-parent:hover,
+	.dropdown-parent:focus-within {
+		pointer-events: none;
+	}
+	*/
+	
+	.subnav {
+		pointer-events: auto;
+	}
+
+}
+
+
+@media screen and (max-height: 600px) {
+
+	.headline {
+		width: 60vw;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.banner {}
+
+	.album-img {
+		position: relative;
+		bottom: -30px;
+		right: 100px;
+		z-index: 2;
+		height: 85vh;
 	}
 }
 
 
 @media screen and (max-width: 1050px) {
-
-	/*
-	.main-nav > li:hover,
-	.main-nav > li:focus-within {
-		pointer-events: none;
-	}
-	*/
 
 	.headline {
 		position: relative;
@@ -541,6 +548,7 @@ footer {
 		margin-top: 50px;
 	}
 }
+
 
 @media screen and (max-width: 799px) {
 
@@ -556,8 +564,8 @@ footer {
 		margin: 0 auto -5vw auto;
 		width: 400px;
 	}
-
 }
+
 
 @media screen and (max-width: 415px) {
 
