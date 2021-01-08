@@ -1,7 +1,3 @@
-//const grid = document.querySelector('.grid-container');
-//grid.style.gridTemplateColumns = "repeat(4, 1fr)";
-
-
 // GLOBAL NAV
 $(function () {
 	$(".main-navigation").load("main-navigation.html");
@@ -9,13 +5,7 @@ $(function () {
 	$(".footer-content").load("footer.html");
 });
 
-
-// FOOTER/SCROLL TO TOP BUTTON
-//$(function () {
-//	$(".footer-content").load("footer.html");
-//});
-
-
+// BACK TO TOP BUTTON
 $(document).ready(function () {
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 100) {
@@ -136,34 +126,3 @@ window.addEventListener('keydown', function (e) {
 	}
 })
 
-
-
-//function viewLarge(e) {
-//	if (e.target.classList.contains('cards')) {
-//		
-//		const imgClicked = e.target.src;
-//		const frontImage = imgClicked.replace('-3','-2');
-//		const backImage = imgClicked.replace('-2','-3');
-//		const imageTitle = e.target.nextElementSibling.textContent;
-//		
-//		const lgViewContainer = document.createElement('div');
-//		lgViewContainer.classList.add('large-view');
-//		body.appendChild(lgViewContainer);
-//
-//		const closeBtn = document.createElement('div');
-//		closeBtn.classList.add('close');
-//		closeBtn.textContent = "X";
-//		lgViewContainer.appendChild(closeBtn);
-//
-//		const imgContainer = document.createElement('div');
-//		imgContainer.classList.add('large-image');
-//		lgViewContainer.appendChild(imgContainer);
-//		
-//		const lgImage = document.createElement('img');
-//		lgImage.src = frontImage;
-//		lgImage.onmouseover = function() {lgImage.src = backImage;};
-//		lgImage.onmouseout = function() {lgImage.src = frontImage;};
-//		lgImage.setAttribute('alt', imageTitle);
-//		imgContainer.appendChild(lgImage);
-//	}
-//}

@@ -18,18 +18,20 @@
 
 <body>
 
-	<div class="index-color">
+	<div class="gradient-bg">
 		<div class="index-page">
 			<!--  GLOBAL NAVIGATION   -->
 			<!--  Make changes in the index-main-navigation.html file   -->
 			<div class="index-main-navigation"></div>
 
 			<section class="banner">
-				<div class="headline">
-					<div class="sub-text">Hold on to the Memory</div>
-					<h1 class="tagline">Get it Printed</h1>
-				</div>
-				<img class="album-img" src="./images/home/photo-album-template.png" alt="Holding a Photo Album">
+				<div class="sub-text">Hold on to the Memory</div>
+				<h1 class="tagline">Get it Printed</h1>
+				<picture>
+					<source media="(min-width: 415px)" srcset="./images/home/photo-album-template.webp" type="image/webp">
+					<source media="(min-width: 415px)" srcset="./images/home/photo-album-template.png" type="image/jpeg">
+					<img class="album-img album-mobile" src="./images/home/cover-mobile.png" alt="Holding a Wedding Album">
+				</picture>
 			</section>
 
 			<div class="border"></div>
@@ -40,7 +42,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/CSSRulePlugin.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="./js/main.js"></script>
-
+	
 	<script>
 		
 		gsap.registerPlugin(CSSRulePlugin);
@@ -58,8 +60,6 @@
 			duration: .5,
 			ease: 'sine',
 		}, "-=.8")
-		
-		
 		
 	</script>
 </body>
