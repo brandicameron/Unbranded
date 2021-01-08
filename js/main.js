@@ -28,12 +28,13 @@ const body = document.querySelector('body');
 function viewLarge(e) {
 	
 	let lgImage;
+	let imageAlt = e.target.alt;
 	
 	if (e.target.classList.contains('view')) {
 		const imgClicked = e.target.src;
 		const frontImage = imgClicked.replace('-3','-2');
 		const backImage = imgClicked.replace('-2','-3');
-		const imageTitle = e.target.nextElementSibling.textContent;
+		const imageAlt = e.target.nextElementSibling.textContent;
 		
 		const lgViewContainer = document.createElement('div');
 		lgViewContainer.classList.add('large-view');
@@ -49,7 +50,7 @@ function viewLarge(e) {
 		
 		const lgImage = document.createElement('img');
 		lgImage.src = frontImage;
-		lgImage.setAttribute('alt', imageTitle);
+		lgImage.setAttribute('alt', imageAlt);
 		imgContainer.appendChild(lgImage);
 		
 		const thumbnailContainer = document.createElement('div');
@@ -58,13 +59,13 @@ function viewLarge(e) {
 		
 		const thumbFront = document.createElement('img');
 		thumbFront.classList.add('thumbnail');
-		thumbFront.setAttribute('alt', imageTitle);
+		thumbFront.setAttribute('alt', imageAlt);
 		thumbFront.src = frontImage;
 		thumbnailContainer.appendChild(thumbFront);
 		
 		const thumbBack = document.createElement('img');
 		thumbBack.classList.add('thumbnail');
-		thumbBack.setAttribute('alt', imageTitle);
+		thumbBack.setAttribute('alt', imageAlt);
 		thumbBack.src = backImage;
 		thumbnailContainer.appendChild(thumbBack);
 		
@@ -79,10 +80,10 @@ function viewLarge(e) {
 function viewLargeSingle(e) {
 	
 	let lgImage;
+	let imageAlt = e.target.alt;
 	
 	if (e.target.classList.contains('cards')) {
 		const imgClicked = e.target.src;
-		const imageTitle = e.target.nextElementSibling.textContent;
 		
 		const lgViewContainer = document.createElement('div');
 		lgViewContainer.classList.add('large-view');
@@ -98,9 +99,9 @@ function viewLargeSingle(e) {
 		
 		const lgImage = document.createElement('img');
 		lgImage.src = imgClicked;
-		lgImage.setAttribute('alt', imageTitle);
+		lgImage.setAttribute('alt', imageAlt);
 		imgContainer.appendChild(lgImage);
-	}
+	} 
 }
 
 
