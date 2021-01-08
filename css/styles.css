@@ -263,11 +263,11 @@ li {
 	left: 50%;
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
-	padding: 0 10vw;
-	height: auto;
-	max-height: 99vh;
+	max-width: 90vw;
+	max-height: 95vh;
 	border: 10px solid black;
 	background: #fff;
+	padding: 25px;
 	z-index: 100;
 	box-shadow: 15px 20px 50px -20px rgb(34 34 34 / 70%);
 	display: flex;
@@ -299,11 +299,14 @@ li {
 
 .large-image {
 	background: #fff;
-	margin-top: 10px;
 }
 
 .large-image > img {
-	max-width: 85vh;
+	/*width: auto;*/
+	max-width: 600px;
+	max-height: 95vh;
+	/*height: auto;*/
+	margin-top: 20px;
 }
 
 .thumbnail {
@@ -327,6 +330,11 @@ li {
 .cards {
 	width: 100%;
 	max-width: 600px;
+	cursor: pointer;
+}
+
+.view {
+	cursor: pointer;
 }
 
 .christmas-cards {
@@ -476,14 +484,6 @@ footer {
 		grid-row-gap: 7rem;
 	}
 
-	.large-view {
-		padding: 0 5vw;
-	}
-
-	.large-image > img {
-		max-width: 65vh;
-	}
-
 	.sub-heading {
 		width: 60vw;
 	}
@@ -607,14 +607,6 @@ footer {
 		grid-row-gap: 4rem;
 		grid-column-gap: 2rem;
 		width: 80%;
-	}
-	
-	.large-view {
-		padding: 0;
-	}
-
-	.large-image > img {
-		max-width: 40vh;
 	}
 
 	.sub-heading {
