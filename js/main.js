@@ -26,16 +26,16 @@ $(document).ready(function () {
 const body = document.querySelector('body');
 
 function viewLarge(e) {
-	
+
 	let lgImage;
 	let imageAlt = e.target.alt;
-	
+
 	if (e.target.classList.contains('view')) {
 		const imgClicked = e.target.src;
-		const frontImage = imgClicked.replace('-3','-2');
-		const backImage = imgClicked.replace('-2','-3');
+		const frontImage = imgClicked.replace('-3', '-2');
+		const backImage = imgClicked.replace('-2', '-3');
 		const imageAlt = e.target.nextElementSibling.textContent;
-		
+
 		const lgViewContainer = document.createElement('div');
 		lgViewContainer.classList.add('large-view');
 		body.appendChild(lgViewContainer);
@@ -47,44 +47,36 @@ function viewLarge(e) {
 		const imgContainer = document.createElement('div');
 		imgContainer.classList.add('large-image');
 		lgViewContainer.appendChild(imgContainer);
-		
+
 		const lgImage = document.createElement('img');
 		lgImage.src = frontImage;
 		lgImage.setAttribute('alt', imageAlt);
 		imgContainer.appendChild(lgImage);
-		
+
 		const thumbnailContainer = document.createElement('div');
 		thumbnailContainer.classList.add('thumbnails');
 		lgViewContainer.appendChild(thumbnailContainer);
-		
+
 		const thumbFront = document.createElement('img');
 		thumbFront.classList.add('thumbnail');
 		thumbFront.setAttribute('alt', imageAlt);
 		thumbFront.src = frontImage;
 		thumbnailContainer.appendChild(thumbFront);
-		
+
 		const thumbBack = document.createElement('img');
 		thumbBack.classList.add('thumbnail');
 		thumbBack.setAttribute('alt', imageAlt);
 		thumbBack.src = backImage;
 		thumbnailContainer.appendChild(thumbBack);
-		
+
 		thumbnailContainer.addEventListener('click', (e) => {
 			if (e.target.classList.contains('thumbnail')) {
 				lgImage.src = e.target.src;
 			}
 		})
-	}
-}
-
-function viewLargeSingle(e) {
-	
-	let lgImage;
-	let imageAlt = e.target.alt;
-	
-	if (e.target.classList.contains('cards')) {
+	} else if (e.target.classList.contains('cards')) {
 		const imgClicked = e.target.src;
-		
+
 		const lgViewContainer = document.createElement('div');
 		lgViewContainer.classList.add('large-view');
 		body.appendChild(lgViewContainer);
@@ -96,14 +88,13 @@ function viewLargeSingle(e) {
 		const imgContainer = document.createElement('div');
 		imgContainer.classList.add('large-image');
 		lgViewContainer.appendChild(imgContainer);
-		
+
 		const lgImage = document.createElement('img');
 		lgImage.src = imgClicked;
 		lgImage.setAttribute('alt', imageAlt);
 		imgContainer.appendChild(lgImage);
-	} 
+	}
 }
-
 
 
 function closeLargeView(e) {
@@ -114,10 +105,8 @@ function closeLargeView(e) {
 	}
 }
 
-
 // EVENT LISTENERS
 body.addEventListener('click', viewLarge);
-body.addEventListener('click', viewLargeSingle);
 body.addEventListener('click', closeLargeView);
 
 window.addEventListener('keydown', function (e) {
@@ -126,13 +115,3 @@ window.addEventListener('keydown', function (e) {
 		largeView.remove();
 	}
 })
-
-
-
-
-let name = document.getElementsByClassName('title');
-
-for (let i = 0; i < name.length; i++) {
-	console.log(name[i].innerHTML);
-}
-
