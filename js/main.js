@@ -127,3 +127,12 @@ window.addEventListener('keydown', function (e) {
 	}
 })
 
+
+
+
+let name = document.getElementsByClassName('title');
+
+for (let i = 0; i < name.length; i++) {
+	console.log(name[i].innerHTML);
+}
+
