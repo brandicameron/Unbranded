@@ -167,7 +167,7 @@ a:hover {
 	align-items: center;
 	margin: 0 auto;
 	background: #fff;
-	z-index: 100;
+	z-index: 1000;
 }
 
 #menu-checkbox {
@@ -259,7 +259,7 @@ li {
 	opacity: 0;
 	transform-origin: center;
 	animation: grow 100ms linear forwards;
-	z-index: 1000;
+	z-index: 1001;
 }
 
 @keyframes grow {
@@ -565,6 +565,32 @@ footer {
 
 	.subnav {
 		pointer-events: auto;
+	}
+}
+
+@media (hover: none) and (max-width: 1550px) {
+	.content {
+		flex-direction: column-reverse;
+		height: 80vh;
+	}
+
+	.album-img {
+		height: 50vw;
+		width: auto;
+		margin-top: 70px;
+	}
+
+	.sub-text {
+		margin-top: 80px;
+	}
+
+	.grid-container {
+		grid-template-columns: repeat(3, 1fr);
+		grid-row-gap: 7rem;
+	}
+
+	.sub-heading {
+		width: 60vw;
 	}
 }
 
