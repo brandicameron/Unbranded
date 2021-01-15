@@ -568,7 +568,7 @@ footer {
 	}
 }
 
-@media (hover: none) and (max-width: 1550px) {
+@media (hover: none) and (max-width: 1550px) and (orientation : portrait) {
 	.content {
 		flex-direction: column-reverse;
 		height: 80vh;
