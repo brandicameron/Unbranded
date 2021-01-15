@@ -1,1 +1,12 @@
-<a href="#top" id="scroll" class="back-to-top"><span class="up-arrow">&#8679;</span></a>
+<a href="#top" id="scroll" class="back-to-top hide"><span class="up-arrow">&#8679;</span></a>
+
+<script>
+	window.onscroll = function() {
+		const backToTopBtn = document.querySelector('.back-to-top');
+		if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+			backToTopBtn.classList.remove('hide');
+		} else {
+			backToTopBtn.classList.add('hide');
+		}
+	};
+</script>

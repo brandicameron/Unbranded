@@ -1,117 +1,162 @@
-// GLOBAL NAV
+//Global variables
+const grid = document.querySelectorAll('.grid-container');
+//Gives all product containers a universal class (used for keyboard use functions)
+//This must remain above the products variable below to work
+grid.forEach((item) => {
+	item.classList.add('products');
+})
+const body = document.querySelector('body');
+const products = document.querySelectorAll('.products');
+//Capture active element for keyboard users to return to after large view
+let activeElement;
+
+
+
+//Global navigation
 $(function () {
 	$(".main-navigation").load("main-navigation.html");
-	$(".index-main-navigation").load("index-main-navigation.html");
 	$(".footer-content").load("footer.html");
-});
-
-// BACK TO TOP BUTTON
-$(document).ready(function () {
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > 100) {
-			$('#scroll').fadeIn();
-		} else {
-			$('#scroll').fadeOut();
-		}
-	});
-	$('#scroll').click(function () {
-		$("html, body").animate({
-			scrollTop: 0
-		}, 600);
-		return false;
-	});
-});
+});;
 
 
-const body = document.querySelector('body');
 
-function viewLarge(e) {
+function createLgImageModal() {
+	const modal = document.createElement('div');
+	modal.classList.add('modal');
+	body.appendChild(modal);
 
-	let lgImage;
-	let imageAlt = e.target.alt;
+	const closeBtn = document.createElement('div');
+	closeBtn.classList.add('close-btn');
+	modal.appendChild(closeBtn);
 
+	const imgContainer = document.createElement('div');
+	imgContainer.classList.add('img-container');
+	modal.appendChild(imgContainer);
+
+	const image = document.createElement('img');
+	image.classList.add('image');
+	imgContainer.appendChild(image);
+}
+
+function viewLargeImage(e) {
+	if (e.target.classList.contains('cards')) {
+		createLgImageModal();
+		const image = document.querySelector('.image');
+		image.src = e.target.src;
+		image.alt = e.target.alt;
+	}
+}
+
+
+function viewLgChristmasCard(e) {
 	if (e.target.classList.contains('view')) {
-		const imgClicked = e.target.src;
-		const frontImage = imgClicked.replace('-3', '-2');
-		const backImage = imgClicked.replace('-2', '-3');
-		const imageAlt = e.target.nextElementSibling.textContent;
+		const template = document.querySelector(".template");
+		const modal = template.content.cloneNode(true);
+		document.body.appendChild(modal);
 
-		const lgViewContainer = document.createElement('div');
-		lgViewContainer.classList.add('large-view');
-		body.appendChild(lgViewContainer);
+		const image = document.querySelector('.image');
+		const thumbnails = document.querySelector('.thumbnails');
+		const thumbFront = document.querySelector('.thumb-front');
+		const thumbBack = document.querySelector('.thumb-back');
 
-		const closeBtn = document.createElement('div');
-		closeBtn.classList.add('close');
-		lgViewContainer.appendChild(closeBtn);
+		image.src = e.target.src.replace('-3', '-2');
+		image.alt = e.target.alt;
+		thumbFront.src = e.target.src.replace('-3', '-2');
+		thumbFront.alt = e.target.alt;
+		thumbBack.src = e.target.src.replace('-2', '-3');
+		thumbBack.alt = e.target.alt;
 
-		const imgContainer = document.createElement('div');
-		imgContainer.classList.add('large-image');
-		lgViewContainer.appendChild(imgContainer);
-
-		const lgImage = document.createElement('img');
-		lgImage.src = frontImage;
-		lgImage.setAttribute('alt', imageAlt);
-		imgContainer.appendChild(lgImage);
-
-		const thumbnailContainer = document.createElement('div');
-		thumbnailContainer.classList.add('thumbnails');
-		lgViewContainer.appendChild(thumbnailContainer);
-
-		const thumbFront = document.createElement('img');
-		thumbFront.classList.add('thumbnail');
-		thumbFront.setAttribute('alt', imageAlt);
-		thumbFront.src = frontImage;
-		thumbnailContainer.appendChild(thumbFront);
-
-		const thumbBack = document.createElement('img');
-		thumbBack.classList.add('thumbnail');
-		thumbBack.setAttribute('alt', imageAlt);
-		thumbBack.src = backImage;
-		thumbnailContainer.appendChild(thumbBack);
-
-		thumbnailContainer.addEventListener('click', (e) => {
+		thumbnails.addEventListener('click', (e) => {
 			if (e.target.classList.contains('thumbnail')) {
-				lgImage.src = e.target.src;
+				image.src = e.target.src;
 			}
 		})
-	} else if (e.target.classList.contains('cards')) {
-		const imgClicked = e.target.src;
 
-		const lgViewContainer = document.createElement('div');
-		lgViewContainer.classList.add('large-view');
-		body.appendChild(lgViewContainer);
+		thumbnails.addEventListener('keydown', (e) => {
+			if (e.keyCode === 13) {
+				if (e.target.classList.contains('thumbnail')) {
+					image.src = e.target.src;
+				}
+			}
+		})
+	}
+}
 
-		const closeBtn = document.createElement('div');
-		closeBtn.classList.add('close');
-		lgViewContainer.appendChild(closeBtn);
-
-		const imgContainer = document.createElement('div');
-		imgContainer.classList.add('large-image');
-		lgViewContainer.appendChild(imgContainer);
-
-		const lgImage = document.createElement('img');
-		lgImage.src = imgClicked;
-		lgImage.setAttribute('alt', imageAlt);
-		imgContainer.appendChild(lgImage);
+function closeLargeImage(e) {
+	const modal = document.querySelector('.modal');
+	if (e.target.classList.contains('close-btn') || e.target.classList.contains('image')) {
+		modal.remove();
+	} else if (e.keyCode === 27) {
+		modal.remove();
+		// return keyboard user to same place on page after closing modal window
+		if (!(activeElement === undefined)) {
+			activeElement.focus();
+		}
 	}
 }
 
 
-function closeLargeView(e) {
-	if (e.target.classList.contains('close')) {
-		e.target.parentNode.remove();
-	} else if (e.target.classList.contains('large-view')) {
-		e.target.remove();
-	}
+
+// ******  ACCESSIBILITY  ******
+
+//Make all product images tab accessible
+const allImgs = document.querySelectorAll('img');
+const albumImgs = document.querySelectorAll('.albums');
+const firstAlbumImg = document.querySelector('.albums');
+
+
+allImgs.forEach((img) => {
+	img.tabIndex = "0";
+})
+
+//Target for skip to content link
+allImgs[0].setAttribute('id', 'first-product');
+
+if (allImgs[0].classList.contains('albums')) {
+	firstAlbumImg.removeAttribute('id');
+	firstAlbumImg.parentElement.setAttribute('id', 'first-product');
 }
 
-// EVENT LISTENERS
-body.addEventListener('click', viewLarge);
-body.addEventListener('click', closeLargeView);
+//Removing tabIndex for albums, already wrapped in a tag and otherwise you have to tab twice to select an album design
+albumImgs.forEach((album) => {
+	album.removeAttribute('tabIndex');
+})
 
-window.addEventListener('keydown', function (e) {
-	const largeView = document.querySelector('.large-view');
-	if (e.key === 'Escape') {
-		largeView.remove();
+//For tabbing to products and viewing large
+products.forEach((container) => {
+	container.addEventListener('keydown', (e) => {
+		if (e.keyCode === 13) {
+			activeElement = document.activeElement;
+
+			if (e.target.classList.contains('cards')) {
+				viewLargeImage(e);
+			} else if (e.target.classList.contains('view')) {
+				viewLgChristmasCard(e);
+				thumbnailFocus();
+			}
+		}
+	});
+})
+
+//Focus first thumbnail for keyboard users
+function thumbnailFocus(e) {
+	const thumbFront = document.querySelector('.thumb-front');
+	thumbFront.focus();
+}
+
+//Adds focus indicator to images for keyboard users only
+body.addEventListener('keydown', (e) => {
+	if (e.keyCode === 9) {
+		allImgs.forEach((img) => {
+			img.classList.add('add-focus');
+		})
 	}
 })
+
+
+
+// EVENT LISTENERS
+body.addEventListener('click', viewLargeImage);
+body.addEventListener('click', viewLgChristmasCard);
+body.addEventListener('click', closeLargeImage);
+body.addEventListener('keydown', closeLargeImage);
