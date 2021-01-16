@@ -21,6 +21,7 @@ $(function () {
 
 
 function createLgImageModal() {
+	body.style.overflow = "hidden";
 	const modal = document.createElement('div');
 	modal.classList.add('modal');
 	body.appendChild(modal);
@@ -50,6 +51,7 @@ function viewLargeImage(e) {
 
 function viewLgChristmasCard(e) {
 	if (e.target.classList.contains('view')) {
+		body.style.overflow = "hidden";
 		const template = document.querySelector(".template");
 		const modal = template.content.cloneNode(true);
 		document.body.appendChild(modal);
@@ -86,8 +88,10 @@ function closeLargeImage(e) {
 	const modal = document.querySelector('.modal');
 	if (e.target.classList.contains('close-btn') || e.target.classList.contains('image')) {
 		modal.remove();
+		body.style.overflow = "scroll";
 	} else if (e.keyCode === 27) {
 		modal.remove();
+		body.style.overflow = "scroll";
 		// return keyboard user to same place on page after closing modal window
 		if (!(activeElement === undefined)) {
 			activeElement.focus();
