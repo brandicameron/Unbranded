@@ -111,12 +111,6 @@ const firstAlbumImg = document.querySelector('.albums');
 
 
 allImgs.forEach((img) => {
-	if (img.classList.contains('cards')) {
-		img.setAttribute('width', '600');
-	}
-})
-
-allImgs.forEach((img) => {
 	img.tabIndex = "0";
 })
 
