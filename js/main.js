@@ -1,3 +1,4 @@
+
 //Global variables
 const grid = document.querySelectorAll('.grid-container');
 //Gives all product containers a universal class (used for keyboard use functions)
@@ -108,6 +109,12 @@ const allImgs = document.querySelectorAll('img');
 const albumImgs = document.querySelectorAll('.albums');
 const firstAlbumImg = document.querySelector('.albums');
 
+
+allImgs.forEach((img) => {
+	if (img.classList.contains('cards')) {
+		img.setAttribute('width', '600');
+	}
+})
 
 allImgs.forEach((img) => {
 	img.tabIndex = "0";
